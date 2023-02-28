@@ -10,7 +10,7 @@ public class SearchInGithub {
     @Test
     void checkEnterprisePage() {
         open("https://github.com/");
-        $$("ul.list-style-none button").get(1).hover();
+        $(byTagAndText("button","Solutions")).hover();
         $(byTagAndText("a","Enterprise")).click();
         $("h1").shouldHave(text("Build like the best"));
     }
